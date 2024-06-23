@@ -1,0 +1,31 @@
+/* client-list.component.css */
+.client-list-container {
+    font-family: Arial, sans-serif;
+  }
+  
+  .client-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+  }
+  
+  .client-name {
+    font-weight: bold;
+  }
+  
+  .client-details {
+    color: #666666;
+  }
+  ::ng-deep .mat-form-field-wrapper{
+    margin-bottom: -1.25em;
+  }
+  .mat-success {
+    background-color: green;
+    color: #fff;
+  }
+  .example-button-row button,
+  .example-button-row a {
+    margin-right: 8px;
+  }
+    

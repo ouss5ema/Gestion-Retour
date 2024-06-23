@@ -1,0 +1,8 @@
+{
+    "clientsDB":[
+    { "id": 1, "nom": "John", "prenom": "Doe", "telephone": "123456789", "email": "john@example.com"},
+    { "id": 2, "nom": "Jane", "prenom": "Doe", "telephone": "987654321", "email": "jane@example.com" },
+    { "id": 3, "nom": "Alice", "prenom": "Smith", "telephone": "555666777", "email": "alice@example.com" }
+    
+  ]
+}

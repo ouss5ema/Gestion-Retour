@@ -1,0 +1,63 @@
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+    <div class="card-icon">
+      <i class="material-icons">list</i>
+    </div>
+    <h6 id="section1" class="font-weight-bold text-danger text-uppercase position-custom" style="text-align: left;">Liste des utilisateurs</h6>
+  </div>
+ 
+
+  <div class="card-body">
+    <div class="text-center mb-4">
+      <button type="button" class="btn btn-danger btn-lg" (click)="onAddClient()">
+        <i class="material-icons">person_add</i> Ajouter Client
+      </button>
+    </div>
+
+    <!-- Modal pour ajouter un utilisateur -->
+    <div class="modal fade" id="addUserModal" tabindex="-1" role="dialog" aria-labelledby="addUserModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <!-- Contenu du modal pour ajouter un utilisateur -->
+        </div>
+      </div>
+    </div>
+
+    <div class="table-responsive table-container">
+      <table class="table table-bordered" width="100%" cellspacing="0">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Téléphone</th>
+            <th>Email</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let client of clients">
+            <td>{{ client.id }}</td>
+            <td>{{ client.nom }}</td>
+            <td>{{ client.prenom }}</td>
+            <td>{{ client.telephone }}</td>
+            <td>{{ client.email }}</td>
+            <td>
+              <!-- Les boutons pour modifier et supprimer l'utilisateur ouvrent des modaux -->
+              <button class="btn btn-warning" data-toggle="modal" data-target="#editUserModal" (click)="onEditClient(client)">Modifier</button>
+              <button class="btn btn-info" data-toggle="modal" data-target="#deleteUserModal" (click)="onDeleteClient(client.id)">Supprimer</button>
+              <button type="button" class="btn btn-primary" (click)="onCloseClient(client)">
+                <i class="fa fa-ticket-alt" ></i> Créer un ticket
+            </button>
+            
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+
+                 aria-label="Select page of periodic elements">
+  </mat-paginator> -->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,90 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-8">
+              <div class="card">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title">Ajouter Utilisateur</h4>
+                     
+                  </div>
+                  <div class="card-body">
+                      <form [formGroup]="clientForm" (ngSubmit)="onSubmit()">
+                          <div class="row">
+                              <div class="col-md-5">
+                                <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Client MonCoupon" disabled>
+                                  </mat-form-field>
+                              </div>
+                              <!-- <div class="col-md-3">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="id" type="number" formControlName="id">
+                                  </mat-form-field>
+                              </div> -->
+                              
+                              <div class="col-md-4">
+                                  <mat-form-field class="example-full-width">
+                                    
+                                    <input matInput placeholder="nom" type="text" formControlName="nom">
+                                  </mat-form-field>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-6">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="prenom" type="text" formControlName="prenom">
+                                </mat-form-field>
+                              </div>
+                              <div class="col-md-6">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="telephone" type="number" formControlName="telephone">
+                                  
+                                
+                                </mat-form-field>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-12">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Adresse Email" type="email" formControlName="email">
+                                </mat-form-field>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-4">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Adresse" type="text">
+                                  
+                                </mat-form-field>
+                              </div>
+                              <div class="col-md-4">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Ville" type="text">
+                                </mat-form-field>
+                              </div>
+                              <div class="col-md-4">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="code Postal" type="text">
+                                </mat-form-field>
+                              </div>
+                          </div>
+                         
+                          <button mat-raised-button type="submit" class="btn btn-danger pull-right" [disabled]="!clientForm.valid" >Ajouter Utilisateur</button>
+                          <div class="clearfix"></div>
+                          
+                      </form>
+                     
+                      
+                  </div>
+              </div>
+          </div>
+          
+      </div>
+  </div>
+</div>
+<!-- <div class="row">
+  <div class="col-md-12">
+    <a [routerLink]="['typography']" *ngIf="clientForm.valid">
+      {{ clientForm.value.nom }} {{ clientForm.value.prenom }}
+    </a>
+  </div>
+</div> -->

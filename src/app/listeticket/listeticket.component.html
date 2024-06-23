@@ -1,0 +1,112 @@
+<!-- <div *ngFor="let ticket of tickets" class="mb-4">
+  <div class="card">
+    <div class="card-header">
+      
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{ ticket.client?.nom }} {{ ticket.client?.prenom }}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Date d'achat: {{ ticket.dateAchat | date:'mediumDate' }}</h6>
+      <p class="card-text">
+        Ticket ID: {{ ticket.id }}
+        Nom de l'article: {{ticket.nomArticle}}<br>
+        Reference: {{ticket.reference}}<br>
+        Type de retour: {{ ticket.typeRetour }}<br>
+        État: {{ ticket.etat }}<br>
+        Panne: {{ ticket.panne }}<br>
+        Date de création: {{ ticket.dateCreation | date:'medium' }}
+      </p>
+      
+    </div>
+  </div>
+</div> -->
+<!--  -->
+<div class="card shadow mb-4">
+  <div class="table-responsive table-container">
+
+    <table class="table table-bordered" width="100%" cellspacing="0">
+
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Prénom</th>
+          <th>ID Ticket</th>
+          <th>Nom d'article</th>
+          <th>Reference</th>
+          <th>Date D'achat</th>
+          <th>Type de retour</th>
+          <th>Etat</th>
+          <th>Panne</th>
+          <th>Date de création</th>
+          <th>Image</th>
+          <th>Détail</th>
+          
+
+          <!-- <th>Action</th> -->
+        </tr>
+      </thead>
+      <tbody>
+<tr *ngFor="let ticket of tickets" >
+<td>{{ ticket.client?.nom }}</td>
+<td>{{ ticket.client?.prenom }}</td>
+<td>{{ ticket.id}}</td>
+<td>{{ ticket.nomArticle}}</td>
+<td>{{ ticket.reference }}</td>
+<td>{{ ticket.dateAchat }}</td>
+<td>{{ ticket.typeRetour }}</td>
+<td>{{ ticket.etat }}</td>
+<td>{{ticket.panne}}</td>
+<td>{{ticket.dateCreation}}</td>
+
+
+<td>
+  <!-- <div *ngFor="let ticket of tickets"> -->
+    <div class="ticket">
+     
+      <div  class="image-container" *ngIf="ticket.images && ticket.images.length > 0">
+        <img  [src]="ticket.images[0]" alt="Selected image" class="displayed-image">
+      </div>
+      <!-- *ngFor="let image of images" -->
+    <!-- </div> -->
+  </div>
+</td>
+<td>
+  <button class="btn btn-primary" (click)="voirTicket(ticket.id)">Voir ticket</button>
+</td>
+
+<!-- <td>
+  <i (click)="showStatusPopup(ticket)" class="fa" [ngClass]="{
+    'fa-hourglass-start': ticket.statut === 'encours',
+    'fa-check-circle': ticket.statut === 'resolu',
+    'fa-times-circle': ticket.statut === 'clos'
+  }" aria-hidden="true"></i>
+</td> -->
+<!-- <td>
+  <i *ngFor="let ticket of tickets" [ngClass]="{'icon-encours': ticket.statut === 'encours', 'icon-resolu': ticket.statut === 'resolu', 'icon-clos': ticket.statut === 'clos'}" (click)="showStatusPopup(ticket)"></i>
+</td> -->
+</tr>
+<!-- <app-TicketStatusPopup *ngIf="selectedTicket" [ticket]="selectedTicket"></app-TicketStatusPopup> -->
+      </tbody>
+    </table>
+  </div>
+</div>
+  <!-- <div class="card">
+    <div class="card-header">
+      <h6>Ticket ID: {{ ticket.id }}</h6>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"> {{ ticket.client?.prenom }}</h5>
+      <div class="card-text">
+        <p>Nom de l'article: {{ ticket.nomArticle }}</p>
+        <p>Référence: {{ ticket.reference }}</p>
+        <p>Date d'achat: {{ ticket.dateAchat | date:'mediumDate' }}</p>
+        <p>Type de retour: {{ ticket.typeRetour }}</p>
+        <p>État: {{ ticket.etat }}</p>
+        <p>Panne: {{ ticket.panne }}</p>
+        <p>Date de création: {{ ticket.dateCreation | date:'medium' }}</p>
+      </div>
+      <div class="image-container">
+        <img *ngFor="let image of ticket.images" [src]="image" alt="Image du ticket" class="displayed-image">
+      </div>
+    </div>
+  </div>
+</div> -->

@@ -1,0 +1,53 @@
+/* .logo-img img {
+    width: 100px;  
+    height: 100px; 
+} */
+.user-info .info-container {
+    /* Exemple de propriétés pour le conteneur d'information de l'utilisateur */
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .user-info .user-name {
+    /* Styles pour le nom de l'utilisateur */
+    font-weight: bold;
+    color: #333; /* Couleur du texte */
+  }
+/* Style général des éléments de navigation */
+.nav-item .nav-link {
+    color: #494747; /* Mettez ici la couleur utilisée dans votre sidebar */
+    padding: 10px 15px;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+/* Effets au survol sur les éléments de navigation */
+.nav-item .nav-link:hover {
+    background-color: #f2f2f2; 
+    color: #555; 
+}
+.nav-link p {
+    opacity: 1; /* ou 'display: block;' selon votre mise en page */
+     /* pour un effet de fondu en entrée/sortie */
+  }
+
+/* Style des icônes Material Icons dans la navigation */
+.nav-item .nav-link .material-icons {
+    margin-right: 10px; /* Espace entre l'icône et le texte */
+    font-size: 24px; /* Taille de l'icône */
+}
+
+/* Styles spécifiques pour le lien de déconnexion */
+.nav-item .logout-link {
+    color: #ff5252; /* Couleur spécifique pour la déconnexion, si différente */
+}
+
+/* Modifier l'effet de survol pour le lien de déconnexion si nécessaire */
+.nav-item .logout-link:hover {
+    background-color: #ffebee; /* Couleur de fond au survol pour la déconnexion */
+    color: #d32f2f; /* Couleur du texte au survol pour la déconnexion */
+}
+  

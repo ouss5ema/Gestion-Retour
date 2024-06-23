@@ -1,0 +1,102 @@
+.ticket {
+    margin-bottom: 1rem;
+  
+    .card-header {
+      background-color: #f5f5f5;
+      color: #333;
+      font-weight: bold;
+    }
+  
+    .card-body {
+      h5.card-title {
+        margin-top: 0;
+      }
+  
+      .card-subtitle {
+        margin-bottom: 0.5rem;
+      }
+  
+    //   .ticket-images {
+    //     img {
+    //       width: 100px;
+    //       margin-right: 10px;
+    //       margin-bottom: 10px;
+    //     }
+    //   }
+      .ticket-images img.img-thumbnail {
+        max-width: 200px; // Ajustez selon vos besoins
+        max-height: 200px; // Ajustez selon vos besoins
+        width: auto;
+        height: auto;
+        object-fit: contain; // Garde l'aspect ratio de l'image sans la déformer
+        margin-bottom: 10px;
+      }
+      
+    }
+
+  }
+  .image-container {
+    margin: 10px;
+  }
+  
+  .displayed-image {
+    width: 100%; /* ou une autre largeur selon le design */
+    height: auto; /* pour garder l'aspect ratio */
+  }
+  
+  .table-container {
+    margin: 0 auto;
+    overflow-x: auto;
+  }
+  
+  .table {
+    margin-top: 20px;
+    border-collapse: collapse;
+  }
+  
+  .table th {
+    background-color: #f8f9fa; /* Couleur de fond pour les entêtes de tableau */
+  }
+  
+  .table td, .table th {
+    padding: 8px; /* Espacement dans les cellules */
+    text-align: left;
+    border-bottom: 1px solid #dee2e6; /* Ligne séparatrice subtile pour chaque ligne */
+  }
+  
+  .image-container img {
+    width: 100px; /* Largeur fixe pour les images, ajustez selon vos besoins */
+    height: auto; /* Hauteur automatique pour maintenir le ratio d'aspect */
+  }
+  /* client-list.component.css */
+.client-list-container {
+  font-family: Arial, sans-serif;
+}
+
+.client-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.client-name {
+  font-weight: bold;
+}
+
+.client-details {
+  color: #666666;
+}
+::ng-deep .mat-form-field-wrapper{
+  margin-bottom: -1.25em;
+}
+.mat-success {
+  background-color: green;
+  color: #fff;
+}
+.example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+}
+  
+  

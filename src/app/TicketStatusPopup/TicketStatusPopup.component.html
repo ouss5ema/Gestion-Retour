@@ -1,0 +1,9 @@
+<div class="status-popup">
+  <div class="status-content">
+    <h3>Statut: {{ ticket.statut }}</h3>
+    <div class="progress-bar">
+      <div class="progress" [style.width]="getProgressWidth(ticket) + '%'"></div>
+    </div>
+    <!-- Votre logique pour afficher et masquer le popup -->
+  </div>
+</div>

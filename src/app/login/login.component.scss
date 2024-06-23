@@ -1,0 +1,36 @@
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Assurez-vous que le main-content prend toute la hauteur de la vue */
+    background: #ececec; /* Couleur d'arrière-plan du contenu principal */
+  }
+  
+  .container-fluid {
+    padding: 15px;
+  }
+  
+  .card {
+    margin-top: -60px; /* Pour soulever la carte un peu au-dessus du centre si nécessaire */
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2); /* Ajoute une ombre portée pour un effet de profondeur */
+  }
+  
+  .card-header {
+    text-align: center;
+  }
+  
+  .mat-form-field {
+    width: 100%; /* Force le mat-form-field à prendre toute la largeur */
+  }
+  
+  button.mat-raised-button {
+    margin-top: 20px; /* Ajoute un peu d'espace au-dessus du bouton */
+  }
+  
+  /* Média query pour gérer la responsive design */
+  @media (max-width: 768px) {
+    .card {
+      margin-top: 20px;
+    }
+  }
+  
