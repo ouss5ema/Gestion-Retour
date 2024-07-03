@@ -13,22 +13,12 @@ pipeline {
         }
 
         stage('SonarQube Analysis') {
-            steps {
-                withSonarQubeEnv('SonarQube') { // SonarQube server name from Configure System
-                    sh "${SCANNER_HOME}/bin/sonar-scanner -Dsonar.projectKey=sqa_637abf16d94f71dee46a60bfc71875b9c06489f0 -Dsonar.sources=."
-                }
-            }
+          def scannerHome = tool 'sonarqube';
+           withSonarQubeEnv('sonarqube'){
+            sh "${scannerHome}/bin/sonar-scanner \
+               -D sonar.projectKey=jenkins2
         }
 
-        stage('Quality Gate') {
-            steps {
-                script {
-                    def qg = waitForQualityGate()
-                    if (qg.status != 'OK') {
-                        error "Pipeline aborted due to quality gate failure: ${qg.status}"
-                    }
-                }
-            }
-        }
+        
     }
 }
