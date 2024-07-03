@@ -59,7 +59,7 @@ pipeline {
     agent any
 
     environment {
-        SCANNER_HOME = tool name: 'SonarQube', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
+        SCANNER_HOME = tool name: 'sq', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
     }
 
     stages {
@@ -72,7 +72,7 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 script {
-                    withSonarQubeEnv('SonarQube') {
+                    withSonarQubeEnv('sq') {
                         sh """
                             ${SCANNER_HOME}/bin/sonar-scanner \
                             -Dsonar.login=admin \
