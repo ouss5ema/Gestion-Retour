@@ -16,7 +16,11 @@ pipeline {
           def scannerHome = tool 'sonarqube';
            withSonarQubeEnv('sonarqube'){
             sh "${scannerHome}/bin/sonar-scanner \
-               -D sonar.projectKey=jenkins2
+              -D sonar.login=admin   \
+                    -D sonar.password=oussema \
+                    -D sonar.projectKey=vprofile \
+                    
+                    -D sonar.host.url=http://192.168.147.184:9000/"
         }
 
         
